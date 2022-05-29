@@ -16,7 +16,7 @@ export default function Todos() {
             const config = {
                 headers: {
                     'Content-Type':'application/json',
-                    Authorization: `Bearer ${token}`
+                    'Authorization': `Bearer ${token}`
                 }
             }
             try {
@@ -31,14 +31,15 @@ export default function Todos() {
     type Post = {
         _id: string,
         content: string,
-        author: string
+        author: string,
+        likes: string[]
     }
     return (
         <div className="w-full min-h-screen flex flex-col justify-center items-center bg-gray-700 text-white">
             <CreatePost />
             <div className="flex flex-col justify-center">
                 {Posts.map((post:Post, idx:number) => (
-                    <Todo key={idx} id={post._id} content={post.content} author={post.author} />
+                    <Todo key={idx} id={post._id} content={post.content} author={post.author} likes={post.likes} />
                 ))}
             </div>
         </div>

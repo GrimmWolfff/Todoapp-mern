@@ -8,7 +8,8 @@ import Todos from './Components/Todos';
 //* ჩაიხედე ../jwt-ში და წერია მანდ ყველაფერი ჯიგრულად
 
 //! EDIT POST FIX
-//TODO: RUN both concurrently
+//TODO: RUN electron concurrently
+//TODO: Three.js
 
 function App() {
   return (
