@@ -56,7 +56,6 @@ function Todo({ id, author, content, likes }: Props) {
     return (
         <div className="flex flex-row justify-between m-4">
             <div className="flex flex-col w-96">
-                {id}
                 <strong className="text-xl"> { author } </strong>
                 {IsEditing ? (
                     <input type="text" placeholder="Edit" onChange={e => SetEditedPost(e.target.value)}

@@ -1,15 +1,11 @@
-import { useState } from 'react'
 import Register from './Components/Register';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import Login from './Components/Login';
 import Todos from './Components/Todos';
 
-//* ჩაიხედე ../jwt-ში და წერია მანდ ყველაფერი ჯიგრულად
-
 //TODO: RUN electron concurrently
 //TODO: Three.js
-
 function App() {
   return (
     <BrowserRouter>

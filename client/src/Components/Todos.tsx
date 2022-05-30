@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CreatePost from './CreatePost';
 import Todo from './Todo';
+import HeroBackground from './Background';
 
 export default function Todos() {
     const navigate = useNavigate();
@@ -35,9 +36,10 @@ export default function Todos() {
         likes: string[]
     }
     return (
-        <div className="w-full min-h-screen flex flex-col justify-center items-center bg-gray-700 text-white">
+        <div className="w-full flex flex-col items-center text-white">
+            <HeroBackground />
             <CreatePost />
-            <div className="flex flex-col justify-center">
+            <div className="z-50 flex flex-col justify-center">
                 {Posts.map((post:Post, idx:number) => (
                     <Todo key={idx} id={post._id} content={post.content} author={post.author} likes={post.likes} />
                 ))}

@@ -26,7 +26,7 @@ export default function CreatePost() {
         await axios.post('http://localhost:5000/api/posts', {content: CurrentPost}, config);
     }
     return (
-        <form className="w-1/3 m-10">
+        <form className="w-1/3 m-10 z-50 sticky">
             <label className="block" htmlFor="Post">Start a Post</label>
             <div className="inline-flex justify-around w-full">
                 <input type="text" placeholder="Post" onChange={(e) => handlePostMoment(e)}
