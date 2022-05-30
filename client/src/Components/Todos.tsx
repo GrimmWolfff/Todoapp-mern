@@ -16,7 +16,7 @@ export default function Todos() {
             const config = {
                 headers: {
                     'Content-Type':'application/json',
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             }
             try {
